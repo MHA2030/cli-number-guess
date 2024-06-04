@@ -1,11 +1,11 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
-const randomNumber = Math.floor(Math.random() * 10) + 1;
-console.log(randomNumber);
+const randomNumber = Math.floor(Math.random() * 6) + 1;
 const answers = await inquirer.prompt([
     {
         name: "guessedNumber",
         type: "number",
-        message: "Guess a number from 1 to 10",
+        message: "Guess a number from 1 to 6",
     },
 ]);
 if (answers.guessedNumber === randomNumber) {
